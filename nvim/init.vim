@@ -1,3 +1,4 @@
+let g:python3_host_prog = $HOME . '/.local/venv/nvim/bin/python'
 call plug#begin('~/.vim/plugged')
   Plug 'gruvbox-community/gruvbox'
   Plug 'neovim/nvim-lspconfig'
@@ -8,6 +9,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'hrsh7th/cmp-nvim-lsp'
   Plug 'hrsh7th/cmp-buffer'
   Plug 'hrsh7th/cmp-path'
+  Plug 'saadparwaiz1/cmp_luasnip'
+  Plug 'rafamadriz/friendly-snippets'
   Plug 'onsails/lspkind-nvim'
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
@@ -17,6 +20,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary',
   Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
   Plug 'ray-x/lsp_signature.nvim'
+  Plug 'windwp/nvim-autopairs'
+  Plug 'averms/black-nvim', {'do': ':UpdateRemotePlugins'}
 call plug#end()
 
 " set clipboard+=unnamedplus

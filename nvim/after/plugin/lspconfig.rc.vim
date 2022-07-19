@@ -13,7 +13,8 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   local opts = { noremap = true, silent = true }
 
-  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap('n', 'gdb', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  buf_set_keymap("n", "gdt", "<Cmd>tab split | lua vim.lsp.buf.definition()<CR>", opts)
 
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_command [[augroup Format]]
