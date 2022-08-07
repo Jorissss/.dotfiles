@@ -13,8 +13,7 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   local opts = { noremap = true, silent = true }
 
-  buf_set_keymap('n', 'gdb', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap("n", "gdt", "<Cmd>tab split | lua vim.lsp.buf.definition()<CR>", opts)
+  buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
 
   if client.server_capabilities.documentFormattingProvider then
     vim.api.nvim_command [[augroup Format]]
@@ -117,6 +116,14 @@ nvim_lsp.ccls.setup {
       directory = ".ccls-cache";
     }
   }
+}
+
+require('lspconfig')['rust_analyzer'].setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+      ["rust-analyzer"] = {}
+    }
 }
 
 --nvim_lsp.lua-language-server.setup {
