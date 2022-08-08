@@ -12,8 +12,6 @@ lua <<EOF
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
   end
 
-local luasnip = require("luasnip")
-local cmp = require("cmp")
 
   cmp.setup({
     snippet = {
@@ -53,13 +51,11 @@ local cmp = require("cmp")
     end, { "i", "s" }),
     }),
     sources = cmp.config.sources({
-      { name = 'luasnip' },
-    }, {
       { name = 'nvim_lsp' },
     }, {
-      { name = 'path' },
-    }, {
       { name = 'buffer' },
+    }, {
+      { name = 'nvim_lsp_signature_help' }
     }),
     formatting = {
       format = lspkind.cmp_format({with_text = false, maxwidth = 50})
