@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
-let g:netrw_dirhist_7='/home/joris/repos/ddrnet-tf/configs'
-let g:netrw_dirhist_6='/home/joris/repos/ddrnet-tf/.git'
-let g:netrw_dirhist_5='/home/joris/repos/STDC-Seg/latency'
-let g:netrw_dirhist_4='/etc/ld.so.conf.d'
-let g:netrw_dirhist_3='/home/joris/repos/ddrnet-tf/configs'
-let g:netrw_dirhist_2='/home/joris/repos/ddrnet/configs'
-let g:netrw_dirhist_1='/home/joris/repos/ddrnet-tf/configs'
