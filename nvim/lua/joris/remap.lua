@@ -29,6 +29,11 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
+-- Reloads the Neovim configuration with :so (source).
+vim.keymap.set("n", "<leader><leader>", function()
+    vim.cmd("so")
+end)
+
 -- VISUAL MODE
 ---------------------------------
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

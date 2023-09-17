@@ -1,4 +1,4 @@
--- Bootstrap install lazyvim (check if installed otherwise install blabla...)
+-- lazy.nvim: check if installed otherwise install
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -32,6 +32,9 @@ require('lazy').setup({
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate"
+    },
+    {
+        'tpope/vim-fugitive'
     },
     {
         'VonHeikemen/lsp-zero.nvim',
